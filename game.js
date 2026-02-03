@@ -313,6 +313,40 @@ document.addEventListener('keyup', (e) => {
     }
 });
 
+// 모바일 컨트롤
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+
+// 터치 이벤트 (모바일)
+leftBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    keys.left = true;
+});
+
+leftBtn.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    keys.left = false;
+});
+
+rightBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    keys.right = true;
+});
+
+rightBtn.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    keys.right = false;
+});
+
+// 마우스 이벤트 (데스크톱에서 테스트용)
+leftBtn.addEventListener('mousedown', () => keys.left = true);
+leftBtn.addEventListener('mouseup', () => keys.left = false);
+leftBtn.addEventListener('mouseleave', () => keys.left = false);
+
+rightBtn.addEventListener('mousedown', () => keys.right = true);
+rightBtn.addEventListener('mouseup', () => keys.right = false);
+rightBtn.addEventListener('mouseleave', () => keys.right = false);
+
 // 초기 화면 그리기
 createStars();
 drawStars();
