@@ -2,25 +2,25 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우주선 피하기 게임</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>쿠키 러너</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
-        <h1>우주선 피하기 게임</h1>
+        <h1>쿠키 러너</h1>
         <div class="score-board">
             <span>점수: <span id="score">0</span></span>
-            <span>최고 점수: <span id="highScore">0</span></span>
+            <span>최고: <span id="highScore">0</span></span>
         </div>
-        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
         <div class="controls">
             <button id="startBtn">게임 시작</button>
-            <p class="desktop-hint">조작: ← → 방향키 또는 A, D 키</p>
+            <p class="desktop-hint">점프: ↑ / Space | 슬라이드: ↓</p>
         </div>
         <div class="mobile-controls">
-            <button id="leftBtn" class="control-btn">◀</button>
-            <button id="rightBtn" class="control-btn">▶</button>
+            <button id="jumpBtn" class="control-btn">점프</button>
+            <button id="slideBtn" class="control-btn">슬라이드</button>
         </div>
     </div>
     <script src="game.js"></script>
