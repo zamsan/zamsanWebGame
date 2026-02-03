@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우주선 피하기 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>우주선 피하기 게임</h1>
+        <div class="score-board">
+            <span>점수: <span id="score">0</span></span>
+            <span>최고 점수: <span id="highScore">0</span></span>
+        </div>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div class="controls">
+            <button id="startBtn">게임 시작</button>
+            <p>조작: ← → 방향키 또는 A, D 키</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
